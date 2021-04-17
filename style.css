@@ -1,27 +1,26 @@
 
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
 
 .wrapper{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  transform: translateY(-50%);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: remy(800px);
-  height: remy(480px);
-  border-radius: remy(3px);
-  box-shadow: 0px remy(3px) remy(7px) rgba(0,0,0,.25);
+  height:100vh;
+  width: 100%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  left: 160px;;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
 }
+
 #Game{
     display:none ;
 }
 
+#img{
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  }
 
 
 /* The sidebar menu */
@@ -51,11 +50,7 @@
     color: #f1f1f1;
   }
   
-  /* Style page content */
-  .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
-  }
+
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
