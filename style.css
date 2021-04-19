@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 
+<<<<<<< HEAD
 .wrapper{
   position: relative;
   /* The image used */
@@ -9,16 +11,52 @@
   left: 160px;
 
 
+=======
+*{
+  box-sizing: border-box;
+  
+>>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 }
+.navbar-nav{
+  margin: 0;
+  list-style-type: none;
+  width:10vw;
+  height: 100vh;
+  min-height: 80vh;
+  background-color: fff;
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  align-items:center;
+  box-shadow: 0 100vh 100vw 0 rgba(0, 0, 0, 0.2);
+  margin-right: 100%;
+  justify-content:space-around;
 
+<<<<<<< HEAD
 body, html {
   height: 100%;
   margin: 0;
 }
 #Game{
     display:none ;
+=======
+>>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 }
+.nav-item{
+  color: #515151;
+  display: inline-block;  
+  margin-right: 100%;
+  
+}
+.link-text {
+  display:inline;
+  margin-left: 1rem;
+}
+.nav-item:hover{
+  background: #FFFF99;
+  transform: scale(1.2);
 
+<<<<<<< HEAD
 #main{
   display:none ;
   background-image: url("https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg");
@@ -26,16 +64,56 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   
+=======
+>>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 }
+.logo-image{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
+  .flexbox-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10vw;
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 80vh;
+    width: 90vw;
 
+<<<<<<< HEAD
 
 
 
 * {
   margin: 0;
   padding: 0;
+=======
+>>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
   }
+  .flexbox-container img{
+    position: flex;
+    height: 100vh;
+    width: 90vw;
+    z-index: -1;
+  }
+  .flexbox-item{
+    width: 200px;
+    margin: 10px;
+    border: 3px solid#333;
+    background-color: aquamarine;
+  }
+  .flexbox-item-1{
+    background-color: aqua;
+    position: flex;
+    justify-content: center;
+    align-self: flex-end;
 
+<<<<<<< HEAD
 
 /* The sidebar menu */
 .sidenav {
@@ -61,17 +139,156 @@ body, html {
     font-size: 30px;
     color: #818181;
     display: block;
+=======
   }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
+  .flexbox-item-2{
+    position: flex;
+    justify-content: center;
+>>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
   }
-  
+  .img1{
+    position: flex;
+  }
+  .flexbox-container .btn1 {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 1x6px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .flexbox-container .btn2 {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .flexbox-container .btn1:hover {
+    background-color: yellowgreen;
+  }
+  .flexbox-container .btn2:hover {
+    background-color: yellowgreen;
+  }
+  body,
+input {
+  font-family: "Poppins", sans-serif;
+}
 
+<<<<<<< HEAD
 
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+=======
+.signup {
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  left: 43%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+
+
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn {
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #4d84e2;
+}
+
+.image{
+  width: 100%;
+}
+>>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
