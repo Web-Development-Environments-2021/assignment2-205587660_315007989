@@ -277,4 +277,13 @@ function isUserUsed(user) {
 
 	}
 
+function signIn() {
+	var user=$('#login_username').val();
+	var pass= $('#login_password').val();
+  if (database.find((e) => e.username == user && e.password == pass)) {
+	  opendiv('#settingPage');
+  } else {
+    alert("Sorry, wrong username and password!");
+  }
+}
 
