@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 
-<<<<<<< HEAD
 .wrapper{
   position: relative;
   /* The image used */
@@ -11,11 +10,6 @@
   left: 160px;
 
 
-=======
-*{
-  box-sizing: border-box;
-  
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 }
 .navbar-nav{
   margin: 0;
@@ -32,15 +26,12 @@
   margin-right: 100%;
   justify-content:space-around;
 
-<<<<<<< HEAD
 body, html {
   height: 100%;
   margin: 0;
 }
 #Game{
     display:none ;
-=======
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 }
 .nav-item{
   color: #515151;
@@ -56,7 +47,6 @@ body, html {
   background: #FFFF99;
   transform: scale(1.2);
 
-<<<<<<< HEAD
 #main{
   display:none ;
   background-image: url("https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg");
@@ -64,8 +54,6 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   
-=======
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 }
 .logo-image{
   width: 46px;
@@ -85,15 +73,12 @@ body, html {
     min-height: 80vh;
     width: 90vw;
 
-<<<<<<< HEAD
 
 
 
 * {
   margin: 0;
   padding: 0;
-=======
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
   }
   .flexbox-container img{
     position: flex;
@@ -113,7 +98,6 @@ body, html {
     justify-content: center;
     align-self: flex-end;
 
-<<<<<<< HEAD
 
 /* The sidebar menu */
 .sidenav {
@@ -139,12 +123,10 @@ body, html {
     font-size: 30px;
     color: #818181;
     display: block;
-=======
   }
   .flexbox-item-2{
     position: flex;
     justify-content: center;
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
   }
   .img1{
     position: flex;
@@ -192,14 +174,6 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-<<<<<<< HEAD
-
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-=======
 .signup {
   position: absolute;
   top: 45%;
@@ -291,4 +265,3 @@ form {
 .image{
   width: 100%;
 }
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
