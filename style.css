@@ -43,6 +43,7 @@
   overflow: hidden;
   margin-top: -6px;
 }
+
   .flexbox-container{
     position: absolute;
     top: 0;
@@ -130,7 +131,7 @@ input {
 }
 
 
-.signup,.login,.setting {
+.signup,.login,.setting,.Game {
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
@@ -151,7 +152,6 @@ form {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
-
 
 
 
