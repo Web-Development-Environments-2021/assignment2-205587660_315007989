@@ -209,6 +209,10 @@ form {
   border-radius: 49px;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  padding: 10px 0;
+
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;

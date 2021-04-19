@@ -6,6 +6,12 @@ var pac_color;
 var start_time;
 var time_elapsed;
 var interval;
+var database = [
+	{
+		username: "k",
+		password: "k",
+	},
+];
 
 
 $(document).ready(function() {
@@ -189,3 +195,86 @@ function closediv(){
 
 	// $(".flexbox-containe").css('visibility','hidden');
 }
+
+function submitRegistration(){
+	var flag= false;
+	var Username = $('#signUsername').val()
+	if (isUserUsed(Username)){
+		alert("User Name in use allready")
+		return;
+	}
+	var Password = $('#signPassword').val()
+	if (!(checkPwd(Password))){return;}
+
+	var Name = $('#signFull').val()
+	if (/\d/.test(Name)) {
+		alert("Name Cannt contains numbers")
+		 return; }
+
+	var Email = $('#signEmail').val()
+	if (!(validateEmail(Email))) {
+		alert("Not Valid Email")
+		return;
+	}
+	
+	var date = $('#signDate').val()
+	if (Username.length == 0 || Password.length == 0 || Name.length == 0 || Email.length === 0 || date.length ===0){
+		alert("One or more field are empty");
+		return
+	}
+	database.push({
+		username: Username,
+		password: Password
+	});
+
+	alert("Account made successfully");
+	opendiv('#loginPage');
+}
+
+
+function checkPwd(str) {
+	if (str.length < 6) {
+		alert ("Password is too short");
+		return false;
+	} else if (str.search(/\d/) == -1) {
+		alert("Password need to have number in it");
+		return false;
+
+	} else if (str.search(/[a-zA-Z]/) == -1) {
+		alert("Password need to have lettes in it");
+		return false;
+	}
+	return true;
+}
+
+function checkName(str) {
+	if (str.length < 6) {
+		alert("Password is too short");
+		return false;
+	} else if (str.search(/\d/) == -1) {
+		alert("Password need to have number in it");
+		return false;
+
+	} else if (str.search(/[a-zA-Z]/) == -1) {
+		alert("Password need to have lettes in it");
+		return false;
+	}
+	return true;
+}
+
+function validateEmail(email) {
+	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+}
+
+
+function isUserUsed(user) {
+	for (let i = 0; i < database.length; i++) {
+		if (database[i].username === user)
+			return true;
+		}
+	return false;
+
+	}
+
+
