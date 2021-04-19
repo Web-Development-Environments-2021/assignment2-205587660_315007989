@@ -2,24 +2,23 @@
 <html>
 	<head>
 		<script src="./jquery-3.4.1.slim.min.js"></script>
+		
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 		<script src="https://kit.fontawesome.com/8216796bed.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css" />
 		<!-- <script type="text/javascript" src="./app.js"></script> -->
 	</head>
 
 	<body>
 		<nav class="navbar">
-			
 			<ul class="navbar-nav" >
 				<li class="nav-item"><!--- welcome--->
 					<i class="fas fa-home" ><span class="navbar-nav-text">
 						welcome
 					</span>
-				</i>
-					
+				</i>					
 				</li>			
-
 
 				<li class="nav-item"><!--- Login--->
 					<i class="fas fa-sign-in-alt">
@@ -54,13 +53,45 @@
 				</li>	
 
 			</ul>
-			
 		</nav>
-		<div class="flexbox-container" href="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg">
-			<img class="img" src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg" alt="Snow" id= "img">
-			<button class="btn1">SignUp</button> 
-			<button class="btn2">Register</button>
+		<!----
 
+		<div class="flexbox-container" href="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg">
+			<img class="img1" src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg" alt="Snow" id= "img">
+			<div id="signup"class="btn1">
+				SignUp
+			</div> 
+			<div id="login"class="btn2">Login</div>
+		</div>
+-->
+
+		<div class="flexbox-container">
+				<div class="signup">
+					<form action="" class="sign-in-form"> 
+						<h2 class="title">Sign Up </h2>
+						<div class="input-field">
+							<i class="fas fa-user"></i>
+							<input type="text" placeholder="Username">
+						</div>
+						<div class="input-field">
+							<i class="fas fa-lock"></i>
+							<input type="password" placeholder="Password">
+						</div>
+						<div class="input-field">
+							<i class="fas fa-signature"></i>
+							<input type="Fullname" placeholder="FullName">
+						</div>
+						<div class="input-field">
+							<i class="fas fa-envelope"></i>
+							<input type="text" placeholder="Email">
+						</div>
+						<div class="input-field">
+							<i class="fas fa-birthday-cake"></i>
+							<input type="text" placeholder="DateOfBirth">
+						</div>
+						<input type="submit" value="Login" class="btn solid"> 
+					</form>
+				</div>
 		</div>
 
 

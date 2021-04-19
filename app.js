@@ -7,6 +7,7 @@ var start_time;
 var time_elapsed;
 var interval;
 
+
 $(document).ready(function() {
 	context = canvas.getContext("2d");
 	Start();
@@ -169,4 +170,14 @@ function UpdatePosition() {
 	} else {
 		Draw();
 	}
+}
+
+function opendiv(div){
+	closediv();
+	var x='#'
+	$(x+div).show();
+}
+
+function closediv(){
+
 }
