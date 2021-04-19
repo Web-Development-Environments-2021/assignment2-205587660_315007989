@@ -6,11 +6,24 @@ var pac_color;
 var start_time;
 var time_elapsed;
 var interval;
-
+const database = [
+	{
+	  username: "k",
+	  password: "k",
+	},{
+		username: "admin",
+		password: "admin",
+	  }
+  ];
+  
+  
 
 $(document).ready(function() {
-	context = canvas.getContext("2d");
-	Start();
+	// closediv()
+	opendiv(homePage)
+	// $("register").onclick = function () { opendiv('"#myDiv"') };
+	// context = canvas.getContext("2d");
+	// Start();
 });
 
 function Start() {
@@ -172,12 +185,27 @@ function UpdatePosition() {
 	}
 }
 
-function opendiv(div){
+function opendiv(ID){
 	closediv();
-	var x='#'
-	$(x+div).show();
+	// var x='#'
+	var t= $(ID);
+	t.show();
 }
 
 function closediv(){
+	// $("*[visibility='visible']").css('visibility','hidden');
+	$('.flexbox-container').hide();
 
+
+	// $(".flexbox-containe").css('visibility','hidden');
 }
+function signIn() {
+	var user=$('#login_username').val();
+	var pass= $('#login_password').val();
+  if (database.find((e) => e.username == user && e.password == pass)) {
+	  opendiv('#settingPage');
+  } else {
+    alert("Sorry, wrong username and password!");
+  }
+}
+
