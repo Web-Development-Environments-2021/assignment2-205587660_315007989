@@ -125,16 +125,12 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-#homePage{
+#homePage,#signupPage,#settingPage{
   visibility:visible;
 }
 
 
-#signupPage{
-  visibility:visible;
-}
-
-.signup {
+.signup,.login,.setting {
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
@@ -209,10 +205,6 @@ form {
   border-radius: 49px;
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
-  margin: auto;
-  padding: 10px 0;
-
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
