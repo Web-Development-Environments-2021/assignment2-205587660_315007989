@@ -17,7 +17,6 @@ var database = [
 $(document).ready(function() {
 	// closediv()
 	opendiv(homePage)
-	// $("register").onclick = function () { opendiv('"#myDiv"') };
 	// context = canvas.getContext("2d");
 	// Start();
 });
@@ -176,6 +175,7 @@ function UpdatePosition() {
 	if (score == 50) {
 		window.clearInterval(interval);
 		window.alert("Game completed");
+		return
 	} else {
 		Draw();
 	}
@@ -186,6 +186,9 @@ function opendiv(ID){
 	// var x='#'
 	var t= $(ID);
 	t.show();
+	if (ID === "#gamePage")
+	context = canvas.getContext("2d");
+	Start();
 }
 
 function closediv(){
