@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<script src="./jquery-3.4.1.slim.min.js"></script>
-		
+		<script src="./app.js"></script>
+
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 		<script src="https://kit.fontawesome.com/8216796bed.js" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
@@ -13,30 +14,31 @@
 	<body>
 		<nav class="navbar">
 			<ul class="navbar-nav" >
-				<li class="nav-item"><!--- welcome--->
-					<i class="fas fa-home" ><span class="navbar-nav-text">
+				<li class="nav-item" id="home" onclick="opendiv('#homePage')"><!--- welcome--->
+					<i class="fas fa-home" >
+						<span class="navbar-nav-text" >
 						welcome
 					</span>
 				</i>					
 				</li>			
 
-				<li class="nav-item"><!--- Login--->
+				<li class="nav-item" id="login" onclick="opendiv('#loginPage')" >
 					<i class="fas fa-sign-in-alt">
-						<span class="navbar-nav-text">
+						<span class="navbar-nav-text"  >
 							Login
 						</span>
 					</i>
 				</li>	
 
-				<li class="nav-item"><!--- register--->
+				<li class="nav-item" id="register" onclick="opendiv('#signupPage')">
 					<i class="fas fa-user-plus">
-						<span class="navbar-nav-text">
+						<span class="navbar-nav-text" >
 							Register
 						</span>
 					</i>
 				</li>	
 
-				<li class="nav-item"><!--- settings--->
+				<li class="nav-item" id="settings" onclick="opendiv('#settingPage')">
 					<i class="fas fa-cog">
 						<span class="navbar-nav-text">
 							Settings
@@ -44,7 +46,7 @@
 					</i>
 				</li>	
 
-				<li class="nav-item"><!--- about--->
+				<li class="nav-item" id= "about" onclick="opendiv('#aboutPage')">
 					<i class="fas fa-address-card">
 						<span class="navbar-nav-text">
 							About
@@ -54,18 +56,18 @@
 
 			</ul>
 		</nav>
-		<!----
+		
 
-		<div class="flexbox-container" href="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg">
+		<div class="flexbox-container" id= "homePage" href="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg">
 			<img class="img1" src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg" alt="Snow" id= "img">
-			<div id="signup"class="btn1">
+			<div id="signup"class="btn1" onclick="opendiv('#signupPage')">
 				SignUp
 			</div> 
-			<div id="login"class="btn2">Login</div>
+			<div id="login"class="btn2" onclick="opendiv('#loginPage')">Login</div>
 		</div>
--->
 
-		<div class="flexbox-container">
+
+		<div class="flexbox-container" id="signupPage">
 				<div class="signup">
 					<form action="" class="sign-in-form"> 
 						<h2 class="title">Sign Up </h2>
@@ -89,7 +91,7 @@
 							<i class="fas fa-birthday-cake"></i>
 							<input type="text" placeholder="DateOfBirth">
 						</div>
-						<input type="submit" value="Login" class="btn solid"> 
+						<input type="submit" value="Sign Up" class="btn solid"> 
 					</form>
 				</div>
 		</div>
@@ -111,50 +113,8 @@
   </div>
   
 
-	<div class="wrapper" id="main" > 
+	<div class="wrapper" id="main"> 
 		<div class="container">
-<<<<<<< HEAD
-	
-		<!-- <img src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg" alt="Snow" id= "img"> -->
-			<!-- <button class="btn">Login</button> -->
-			<!-- <button class="btn" src="pacicon.jpg">SignUp</button> -->
-		  </div>
-	</div>
-	
-
-	<div class="wrapper" id="Registration">  
-		
-		<div class="testbox">
-			<h1>Registration</h1>
-		
-			<form action="/">
-				<hr>
-			<div class="accounttype">
-				<input type="radio" value="None" id="radioOne" name="account" checked/>
-				<label for="radioOne" class="radio" chec>Personal</label>
-				<input type="radio" value="None" id="radioTwo" name="account" />
-				<label for="radioTwo" class="radio">Company</label>
-			</div>
-			<hr>
-			<label id="icon" for="name"><i class="icon-envelope "></i></label>
-			<input type="text" name="name" id="name" placeholder="Email" required/>
-			<label id="icon" for="name"><i class="icon-user"></i></label>
-			<input type="text" name="name" id="name" placeholder="Name" required/>
-			<label id="icon" for="name"><i class="icon-shield"></i></label>
-			<input type="password" name="name" id="name" placeholder="Password" required/>
-			<div class="gender">
-			<input type="radio" value="None" id="male" name="gender" checked/>
-			<label for="male" class="radio" chec>Male</label>
-			<input type="radio" value="None" id="female" name="gender" />
-			<label for="female" class="radio">Female</label>
-			</div> 
-			<p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
-			<a href="#" class="button">Register</a>
-			</form>
-			</div>
-	</div> 
-		
-=======
 		<img src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg" alt="Snow" id= "img">
 		<button class="btn">Button</button>
 		  </div>
@@ -162,7 +122,6 @@
 	
 -->
 	
->>>>>>> 514b47042dd530b5c6ca86dbe26cc7bfe19337a8
 
 			
 	<!-- <div class="container__child signup__form">

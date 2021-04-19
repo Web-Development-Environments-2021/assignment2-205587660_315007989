@@ -1,15 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 
-.wrapper{
-  position: relative;
-  /* The image used */
-
-  /* Full height */
-  height: 100%; 
-  left: 160px;
-
-
+*{
+  box-sizing: border-box;
+  
 }
 .navbar-nav{
   margin: 0;
@@ -26,12 +20,6 @@
   margin-right: 100%;
   justify-content:space-around;
 
-body, html {
-  height: 100%;
-  margin: 0;
-}
-#Game{
-    display:none ;
 }
 .nav-item{
   color: #515151;
@@ -47,13 +35,6 @@ body, html {
   background: #FFFF99;
   transform: scale(1.2);
 
-#main{
-  display:none ;
-  background-image: url("https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
 }
 .logo-image{
   width: 46px;
@@ -73,12 +54,6 @@ body, html {
     min-height: 80vh;
     width: 90vw;
 
-
-
-
-* {
-  margin: 0;
-  padding: 0;
   }
   .flexbox-container img{
     position: flex;
@@ -98,31 +73,6 @@ body, html {
     justify-content: center;
     align-self: flex-end;
 
-
-/* The sidebar menu */
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    /* z-index: 1; Stay on top */
-    /* top: 0; Stay at the top */
-    left: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 40px;
-    padding-bottom: 20px;
-    vertical-align:middle; 
-
-
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 15px 8px 15px 16px;
-    text-decoration: none;
-    font-size: 30px;
-    color: #818181;
-    display: block;
   }
   .flexbox-item-2{
     position: flex;
@@ -147,6 +97,7 @@ body, html {
     border-radius: 5px;
     display: inline-block;
   }
+  
   .flexbox-container .btn2 {
     position: absolute;
     width: 400px;
@@ -174,13 +125,21 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+#homePage{
+  visibility:visible;
+}
+
+
+#signupPage{
+  visibility:visible;
+}
+
 .signup {
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
   left: 43%;
   width: 50%;
-  transition: 1s 0.7s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
@@ -192,7 +151,6 @@ form {
   justify-content: center;
   flex-direction: column;
   padding: 0rem 5rem;
-  transition: all 0.2s 0.7s;
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -224,7 +182,6 @@ form {
   text-align: center;
   line-height: 55px;
   color: #acacac;
-  transition: 0.5s;
   font-size: 1.1rem;
 }
 
@@ -255,7 +212,6 @@ form {
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
-  transition: 0.5s;
 }
 
 .btn:hover {
