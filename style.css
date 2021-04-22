@@ -6,6 +6,7 @@
   
 }
 .navbar-nav{
+  
   margin: 0;
   list-style-type: none;
   width:10vw;
@@ -54,7 +55,6 @@
     flex-direction: column-reverse;
     min-height: 80vh;
     width: 90vw;
-
   }
   .flexbox-container img{
     position: flex;
@@ -121,8 +121,8 @@
   .flexbox-container .btn2:hover {
     background-color: yellowgreen;
   }
-  body,
-input {
+
+  body,input {
   font-family: "Poppins", sans-serif;
 }
 
@@ -138,7 +138,7 @@ input {
   left: 43%;
   width: 50%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr;
   z-index: 5;
 }
 
@@ -152,6 +152,19 @@ form {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
+/* 
+#Game{
+  position: relative;
+ 
+  width: inherit;
+  height:inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 0rem;
+}  */
 
 
 
@@ -208,6 +221,7 @@ form {
   font-weight: 600;
   margin: 10px 0;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn:hover {
@@ -216,4 +230,59 @@ form {
 
 .image{
   width: 100%;
+}
+.RandomButton{
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 15px;
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+  left: 120px;
+  margin-bottom: 0%;
+
+}
+.RandomButton:hover {
+  background-color: #4d84e2;
+}
+.GameButton:hover {
+  background-color: #4d84e2;
+}
+.GameButton {
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  right: 80px;
+  margin-bottom: 0%;
+}
+.settings{
+  margin-top: 0%;
+}
+.flexbox-container-settings{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 10vw;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 80vh;
+  width: 90vw;
+  top: 40px;
+
 }

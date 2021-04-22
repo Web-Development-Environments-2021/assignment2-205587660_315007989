@@ -117,44 +117,87 @@
 	</div>
 
 
-	<div class="flexbox-container" id="settingPage">
-		<div class="setting">
+
+	 <div class="flexbox-container" id="gamePage"> 
+		<div class="Game">
+			<div>
+			<div id="score">
+				<label for="lblScore">SCORE:</label>
+				<input id="lblScore" type="text" />
+				<label for="lblTime">TIME:</label>
+				<input id="lblTime" type="text" />
+				<label for="lblLives">Lives:</label>
+				<input id="lblLives" type="text" />
+			</div>
+			<div id="time">
+
+			</div>
+			</div>
+				<canvas id="canvas" width="600" height="600" style="border:1px solid #000000;">
+		</div>
+	</div> 
+
+<div class="flexbox-container" id="settingPage"> 
+	<div class="flexbox-container-settings" >
+		<div class="setting" >
 			<form action="" class="settings-form"> 
-				<h2 class="title">Settings</h2>
-				<div class="input-field">
-					<i class="fas fa-user"></i>
-					<input type="text" placeholder="Username" id="login_username">
+				<h2 class="title" margin="none">Settings</h2>
+				<div>
+					
+					<p>Move Left Key:
+						<input tabindex="0" id="leftkey" type="button" class="keysetting" name="Leftkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowLeft" placeholder="ArrowLeft" required="" aria-required="true" class="error" aria-invalid="true">
+					
+					<p>Move Right Key:
+						<input tabindex="0" id="rightkey" type="button" class="keysetting" name="Rightkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowRight" placeholder="ArrowRight" required="" aria-required="true" class="error" aria-invalid="true">
+					
+					<p>Move Up Key:
+						<input tabindex="0" id="upkey" type="button" class="keysetting" name="Upkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowUp" placeholder="ArrowUp" required="" aria-required="true" class="error" aria-invalid="true">
+					
+					<p>Move Down Key:
+						<input tabindex="0" id="downkey" type="button" class="keysetting" name="Downkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowDown" placeholder="ArrowDown" required="" aria-required="true" class="error" aria-invalid="true">
 				</div>
-				<div class="input-field">
-					<i class="fas fa-lock"></i>
-					<input type="password" placeholder="Password" id="login_password">
-				</div>
-				<div id="GameButton" class="btn2" onclick="opendiv('#gamePage')">Start Gane</div>
+
+				<div margin class="settings">
+					<p>Number Of Balls:</p>
+					<input type="range"  value="50"  min="50" max="90"class="slider" id="numBallsInput" oninput="numBallsOutput.value = numBallsInput.value">
+					<output  id="numBallsOutput">50</output>
+					
+				  </div>
+				  <div class="settings">
+					<p>
+						5 Point Ball Color:
+						<input type="color" value="#6495ED" id="5_color">
+					</p>
+				  </div>
+				  <div class="settings">
+					<p>
+						15 Point Ball Color:
+						<input type="color"  value="#98FB98" id="15_color">
+					</p>
+				  </div>
+				  <div class="settings">
+					<p>
+						25 Point Ball Color:
+						<input type="color" value="#CD5C5C"  id="25_color">
+					</p>
+				  </div>
+				  <div class="settings">
+					<p>Timer(Seconds):</p>
+						<input type="number" id="timer" name="timeOfGame"  value="60" min="60"  aria-invalid="false" class="valid" >
+				  </div>
+				  <div class="settings">
+					<p>Number Of Monsters:</p>
+						<input type="range"  name="numMonsterInput" id="numMonsterInput" value="1" min="1" max="4" oninput="numMonsterOutput.value = numMonsterInput.value">
+						<output name="numMonsterOutput" id="numMonsterOutput">1</output>
+				  </div>
+				<div id="GameButton" class="GameButton" float="left" onclick="opendiv('#gamePage')">Start Gane</div>
+				<div id="RandomButton" class="RandomButton"float="left" onclick="RandomConfig()">Random</div>
 
 			</form>
 	</div>
 </div>
-
-
-
-	<div class="flexbox-container" id="gamePage">
-		<div id="Game">
-			<div id="score">
-				<label for="lblScore">SCORE:</label>
-				<input id="lblScore" type="text" />
-			</div>
-			<div id="time">
-				<label for="lblTime">TIME:</label>
-				<input id="lblTime" 
-				
-		type="text" />
-			</div>
-			<div id="game">
-				<canvas id="canvas" height=90% width=</canvas>
-			</div>
-		</div>
-	</div>
-
-	
+</div>
 	</body>
+
+
 </html> 
