@@ -1,203 +1,365 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="./jquery-3.4.1.slim.min.js"></script>
-		<script src="./app.js"></script>
+  <head>
+    <script src="./jquery-3.4.1.slim.min.js"></script>
+    <script src="./app.js"></script>
 
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-		<script src="https://kit.fontawesome.com/8216796bed.js" crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="style.css" />
-		<!-- <script type="text/javascript" src="./app.js"></script> -->
-	</head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script
+      src="https://kit.fontawesome.com/8216796bed.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script type="text/javascript" src="./app.js"></script> -->
+  </head>
 
-	<body>
-		<nav class="navbar">
-			<ul class="navbar-nav" >
-				<li class="nav-item" id="home" onclick="opendiv('#homePage')"><!--- welcome--->
-					<i class="fas fa-home" >
-						<span class="navbar-nav-text" >
-						welcome
-					</span>
-				</i>					
-				</li>			
+  <body>
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item" id="home" onclick="opendiv('#homePage')">
+          <!--- welcome--->
+          <i class="fas fa-home">
+            <span class="navbar-nav-text"> welcome </span>
+          </i>
+        </li>
 
-				<li class="nav-item" id="login" onclick="opendiv('#loginPage')" >
-					<i class="fas fa-sign-in-alt">
-						<span class="navbar-nav-text"  >
-							Login
-						</span>
-					</i>
-				</li>	
+        <li class="nav-item" id="login" onclick="opendiv('#loginPage')">
+          <i class="fas fa-sign-in-alt">
+            <span class="navbar-nav-text"> Login </span>
+          </i>
+        </li>
 
-				<li class="nav-item" id="register" onclick="opendiv('#signupPage')">
-					<i class="fas fa-user-plus">
-						<span class="navbar-nav-text" >
-							Register
-						</span>
-					</i>
-				</li>	
+        <li class="nav-item" id="register" onclick="opendiv('#signupPage')">
+          <i class="fas fa-user-plus">
+            <span class="navbar-nav-text"> Register </span>
+          </i>
+        </li>
 
-				<li class="nav-item" id="settings" onclick="opendiv('#settingPage')">
-					<i class="fas fa-cog">
-						<span class="navbar-nav-text">
-							Settings
-						</span>
-					</i>
-				</li>	
+        <!-- <li class="nav-item" id="settings" onclick="opendiv('#settingPage')">
+          <i class="fas fa-cog">
+            <span class="navbar-nav-text"> Settings </span>
+          </i>
+        </li> -->
 
-				<li class="nav-item" id= "about" onclick="opendiv('#aboutPage')">
-					<i class="fas fa-address-card">
-						<span class="navbar-nav-text">
-							About
-						</span>
-					</i>
-				</li>	
+        <li class="nav-item" id="about" onclick="switchDialogAboout()">
+          <i class="fas fa-address-card">
+            <span class="navbar-nav-text"> About </span>
+          </i>
+        </li>
+      </ul>
+    </nav>
 
-			</ul>
-		</nav>
-		
+    <div
+      class="flexbox-container"
+      id="homePage"
+      href="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg"
+    >
+      <img
+        class="img1"
+        src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg"
+        alt="Snow"
+        id="img"
+      />
+      <div id="signup" class="btn1" onclick="opendiv('#signupPage')">
+        SignUp
+      </div>
+      <div id="login" class="btn2" onclick="opendiv('#loginPage')">Login</div>
+    </div>
 
-		<div class="flexbox-container" id= "homePage" href="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg">
-			<img class="img1" src="https://coolwallpapers.me/picsup/2901900-pac-man-retro-games-video-games-keep-calm-and_-ghosts-ghost-yellow___game-wallpapers.jpg" alt="Snow" id= "img">
-			<div id="signup"class="btn1" onclick="opendiv('#signupPage')">
-				SignUp
-			</div> 
-			<div id="login"class="btn2" onclick="opendiv('#loginPage')">Login</div>
-			<div id="GameButton" class="btn2" onclick="opendiv('#gamePage')">Start Gane</div>
+    <div class="flexbox-container" id="signupPage">
+      <div class="signup">
+        <form action="" class="sign-in-form" id="signinform">
+          <h2 class="title">Sign Up</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" id="signUsername" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="signPassword" placeholder="Password" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-signature"></i>
+            <input type="Fullname" id="signFull" placeholder="FullName" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="text" id="signEmail" placeholder="Email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-birthday-cake"></i>
+            <input type="date" id="signDate" placeholder="DateOfBirth" />
+          </div>
+          <div type="submit" class="btn solid" onclick="submitRegistration()">
+            Sign Up
+          </div>
+        </form>
+      </div>
+    </div>
 
-		</div>
+    <div class="flexbox-container" id="loginPage">
+      <div class="login">
+        <form action="" class="log-in-form">
+          <h2 class="title">Login</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" id="login_username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="login_password" />
+          </div>
+          <div value="Login" class="btn solid" onclick="signIn()">Log in</div>
+        </form>
+      </div>
+    </div>
 
+    <div class="flexbox-container" id="gamePage">
+      <div class="Game">
+        <div id="score">
+          <label for="lblScore">SCORE:</label>
+          <input id="lblScore" type="text" />
+          <label for="lblTime">TIME:</label>
+          <input id="lblTime" type="text" />
+          <label for="lblLives">Lives:</label>
+          <input id="lblLives" type="text" />
+        </div>
 
-		<div class="flexbox-container" id="signupPage">
-				<div class="signup">
-					<form action="" class="sign-in-form" id="signinform" > 
-						<h2 class="title">Sign Up </h2>
-						<div class="input-field">
-							<i class="fas fa-user"></i>
-							<input type="text" id="signUsername" placeholder="Username">
-						</div>
-						<div class="input-field">
-							<i class="fas fa-lock"></i>
-							<input type="password" id="signPassword" placeholder="Password">
-						</div>
-						<div class="input-field">
-							<i class="fas fa-signature"></i>
-							<input type="Fullname" id="signFull"placeholder="FullName">
-						</div>
-						<div class="input-field">
-							<i class="fas fa-envelope"></i>
-							<input type="text" id="signEmail" placeholder="Email">
-						</div>
-						<div class="input-field">
-							<i class="fas fa-birthday-cake"></i>
-							<input type="date" id="signDate"  placeholder="DateOfBirth">
-						</div>
-						<div type="submit"  class="btn solid" onclick="submitRegistration()" >
-						Sign Up</div> 
-					</form>
-				</div>
-		</div>
+        <div class="gameContiner">
+          <div id="CanvasDiv">
+            <canvas id="canvas" width="600px" height="600px"></canvas>
+          </div>
+          <div id="GameSetting">
+			  <h2>Settings</h2>
+            <label for="leftkey_game">Move Left Key:</label>
+            <input id="leftkey_game" type="button" /></br>
+            <label for="rightkey_game">Move right Key:</label>
+            <input id="rightkey_game" type="button" /></br>
+            <label for="downkey_game">Move down Key:</label>
+            <input id="downkey_game" type="button" /></br>
+            <label for="upkey_game">Move up Key:</label>
+            <input id="upkey_game" type="button" /></br>
 
-		<div class="flexbox-container" id="loginPage">
-			<div class="login">
-				<form action="" class="log-in-form"> 
-					<h2 class="title">Login</h2>
-					<div class="input-field">
-						<i class="fas fa-user"></i>
-						<input type="text" placeholder="Username" id="login_username">
-					</div>
-					<div class="input-field">
-						<i class="fas fa-lock"></i>
-						<input type="password" placeholder="Password" id="login_password">
-					</div>
-					<div  value="Login" class="btn solid" onclick="signIn()"> </div>
-				</form>
-		</div>
-	</div>
-
-
-
-	 <div class="flexbox-container" id="gamePage"> 
-		<div class="Game">
-			<div>
-			<div id="score">
-				<label for="lblScore">SCORE:</label>
-				<input id="lblScore" type="text" />
-				<label for="lblTime">TIME:</label>
-				<input id="lblTime" type="text" />
-				<label for="lblLives">Lives:</label>
-				<input id="lblLives" type="text" />
-			</div>
-			<div id="time">
-
-			</div>
-			</div>
-				<canvas id="canvas" width="600" height="600" style="border:1px solid #000000;">
-		</div>
-	</div> 
-
-<div class="flexbox-container" id="settingPage"> 
-	<div class="flexbox-container-settings" >
-		<div class="setting" >
-			<form action="" class="settings-form"> 
-				<h2 class="title" margin="none">Settings</h2>
-				<div>
-					
-					<p>Move Left Key:
-						<input tabindex="0" id="leftkey" type="button" class="keysetting" name="Leftkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowLeft" placeholder="ArrowLeft" required="" aria-required="true" class="error" aria-invalid="true">
-					
-					<p>Move Right Key:
-						<input tabindex="0" id="rightkey" type="button" class="keysetting" name="Rightkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowRight" placeholder="ArrowRight" required="" aria-required="true" class="error" aria-invalid="true">
-					
-					<p>Move Up Key:
-						<input tabindex="0" id="upkey" type="button" class="keysetting" name="Upkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowUp" placeholder="ArrowUp" required="" aria-required="true" class="error" aria-invalid="true">
-					
-					<p>Move Down Key:
-						<input tabindex="0" id="downkey" type="button" class="keysetting" name="Downkey"  onkeydown="Check_Key_Press(this, event)" value="ArrowDown" placeholder="ArrowDown" required="" aria-required="true" class="error" aria-invalid="true">
-				</div>
-
-				<div margin class="settings">
-					<p>Number Of Balls:</p>
-					<input type="range"  value="50"  min="50" max="90"class="slider" id="numBallsInput" oninput="numBallsOutput.value = numBallsInput.value">
-					<output  id="numBallsOutput">50</output>
-					
-				  </div>
-				  <div class="settings">
-					<p>
-						5 Point Ball Color:
-						<input type="color" value="#6495ED" id="5_color">
-					</p>
-				  </div>
-				  <div class="settings">
-					<p>
-						15 Point Ball Color:
-						<input type="color"  value="#98FB98" id="15_color">
-					</p>
-				  </div>
-				  <div class="settings">
-					<p>
-						25 Point Ball Color:
-						<input type="color" value="#CD5C5C"  id="25_color">
-					</p>
-				  </div>
-				  <div class="settings">
-					<p>Timer(Seconds):</p>
-						<input type="number" id="timer" name="timeOfGame"  value="60" min="60"  aria-invalid="false" class="valid" >
-				  </div>
-				  <div class="settings">
-					<p>Number Of Monsters:</p>
-						<input type="range"  name="numMonsterInput" id="numMonsterInput" value="1" min="1" max="4" oninput="numMonsterOutput.value = numMonsterInput.value">
-						<output name="numMonsterOutput" id="numMonsterOutput">1</output>
-				  </div>
-				<div id="GameButton" class="GameButton" float="left" onclick="opendiv('#gamePage')">Start Gane</div>
-				<div id="RandomButton" class="RandomButton"float="left" onclick="RandomConfig()">Random</div>
-
-			</form>
-	</div>
-</div>
-</div>
-	</body>
+            <label  for="numBalls_game">Number Of Balls:</label>
+            <input  id="numBalls_game" type="text" /></br>
+				<label for="5_color_game">5 Point Ball Color:</label>
+            <input id="5_color_game" type="color" /></br>
+							<label for="15_color_game">5 Point Ball Color:</label>
+            <input id="15_color_game" type="color" /></br>
+							<label for="25_color_game">5 Point Ball Color:</label>
+            <input id="25_color_game" type="color" /></br>
+            <label for="timer_game">Timer(Seconds): </label>
+            <input id="timer_game" type="number" /></br>
+			<label for="numMonster_game">Number Of Monsters: </label>
+            <input id="numMonster_game" type="number" /></br>
 
 
-</html> 
+
+          </div>
+		          <div id="GameButtonNew" class="btn23" onclick="opendiv('#settingPage')">
+          Start New Game
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="flexbox-container" id="settingPage">
+      <div class="flexbox-container-settings">
+        <div class="setting">
+          <form action="" class="settings-form">
+            <h2 class="title" margin="none">Settings</h2>
+            <div>
+              <p>
+                Move Left Key:
+                <input
+                  tabindex="0"
+                  id="leftkey"
+                  type="button"
+                  class="keysetting"
+                  name="Leftkey"
+                  onkeydown="Check_Key_Press(this, event)"
+                  value="ArrowLeft"
+                  placeholder="ArrowLeft"
+                  required=""
+                  aria-required="true"
+                  class="error"
+                  aria-invalid="true"
+                />
+              </p>
+
+              <p>
+                Move Right Key:
+                <input
+                  tabindex="0"
+                  id="rightkey"
+                  type="button"
+                  class="keysetting"
+                  name="Rightkey"
+                  onkeydown="Check_Key_Press(this, event)"
+                  value="ArrowRight"
+                  placeholder="ArrowRight"
+                  required=""
+                  aria-required="true"
+                  class="error"
+                  aria-invalid="true"
+                />
+              </p>
+
+              <p>
+                Move Up Key:
+                <input
+                  tabindex="0"
+                  id="upkey"
+                  type="button"
+                  class="keysetting"
+                  name="Upkey"
+                  onkeydown="Check_Key_Press(this, event)"
+                  value="ArrowUp"
+                  placeholder="ArrowUp"
+                  required=""
+                  aria-required="true"
+                  class="error"
+                  aria-invalid="true"
+                />
+              </p>
+
+              <p>
+                Move Down Key:
+                <input
+                  tabindex="0"
+                  id="downkey"
+                  type="button"
+                  class="keysetting"
+                  name="Downkey"
+                  onkeydown="Check_Key_Press(this, event)"
+                  value="ArrowDown"
+                  placeholder="ArrowDown"
+                  required=""
+                  aria-required="true"
+                  class="error"
+                  aria-invalid="true"
+                />
+              </p>
+            </div>
+
+            <div class="settings">
+              <p>
+                Number Of Balls:
+                <input
+                  type="range"
+                  value="50"
+                  min="50"
+                  max="90"
+                  class="slider"
+                  id="numBallsInput"
+                  oninput="numBallsOutput.value = numBallsInput.value"
+                />
+                <output id="numBallsOutput">50</output>
+              </p>
+            </div>
+            <div class="settings">
+              <p>
+                5 Point Ball Color:
+                <input type="color" value="#6495ED" id="5_color" />
+              </p>
+            </div>
+            <div class="settings">
+              <p>
+                15 Point Ball Color:
+                <input type="color" value="#98FB98" id="15_color" />
+              </p>
+            </div>
+            <div class="settings">
+              <p>
+                25 Point Ball Color:
+                <input type="color" value="#CD5C5C" id="25_color" />
+              </p>
+            </div>
+            <div class="settings">
+              <p>
+                Timer(Seconds):
+                <input
+                  type="number"
+                  id="timer"
+                  name="timeOfGame"
+                  value="60"
+                  min="60"
+                  aria-invalid="false"
+                  class="valid"
+                />
+              </p>
+            </div>
+            <div class="settings">
+              <p>
+                Number Of Monsters:
+                <input
+                  type="range"
+                  name="numMonsterInput"
+                  id="numMonsterInput"
+                  value="1"
+                  min="1"
+                  max="4"
+                  oninput="numMonsterOutput.value = numMonsterInput.value"
+                />
+                <output name="numMonsterOutput" id="numMonsterOutput">1</output>
+              </p>
+            </div>
+
+            <div
+              id="GameButton"
+              class="GameButton"
+              float="left"
+              onclick="config()"
+            >
+              Start Gane
+            </div>
+            <div
+              id="RandomButton"
+              class="RandomButton"
+              float="left"
+              onclick="RandomConfig()"
+            >
+              Random
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <audio
+      id="music"
+      src="music/pacman.mp3"
+      type="audio/mpeg"
+      preload="auto"
+      loop
+    ></audio>
+
+    <footer class="footer">
+      ©️ 2021 Daniel Izmaylov and Ofek Ronen. All rights reserved. for further
+      information feel free to contact us at izmaylov@post.bgu.ac.il and at
+      ofekron@post.bgu.ac.il.
+    </footer>
+
+    <dialog id="about_window">
+	  		<h2>About</h2>
+
+      <p class="t">We did not use any Jquery plugins or any templates.</br>
+        We had difficulty in placing the objects at the right place on the
+        screen.
+      </p>
+      <p class="t">The hourglass makes the enemts move 30% slower for 2 sec </br>
+      The green Mushroom gives another life</p>
+	  
+      <p class="t">this site was created by Daniel Izmaylov and Ofek Ronen</p>
+	        <button id="close" type="button">&times;</button>
+      <p class="t">We hope you enjoyed our game.</p>
+
+    </dialog>
+	
+  </body>
+</html>
