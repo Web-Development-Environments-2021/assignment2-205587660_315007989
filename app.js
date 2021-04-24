@@ -317,7 +317,7 @@ function Draw() {
 			center.x = movingBouns.i * 60 + 15;
 			center.y = movingBouns.j * 60 + 15;
 			var img = new Image();
-			img.src = "cherry.png";
+			img.src = "resources/Image/cherry.png";
 			context.drawImage(img, center.x, center.y, 30, 30);
 		}
 
@@ -326,7 +326,7 @@ function Draw() {
 			center.x = special1.i * 60 + 30;
 			center.y = special1.j * 60 + 30;
 			var img = new Image();
-			img.src = "hourglass.png";
+			img.src = "resources/Image/hourglass.png";
 			context.drawImage(img, center.x, center.y, 30, 30);
 		}
 
@@ -335,7 +335,7 @@ function Draw() {
 			center.x = special2.i * 60 + 15;
 			center.y = special2.j * 60 + 15;
 			var img = new Image();
-			img.src = "pngwing.com.png";
+			img.src = "resources/Image/pngwing.com.png";
 			context.drawImage(img, center.x, center.y, 30, 30);
 		}
 
@@ -347,7 +347,7 @@ function Draw() {
 			var img = new Image();
 			center.x = enemy.i * 60 + 15;
 			center.y = enemy.j * 60 + 15;
-			img.src = "enemy" + (i + 1) + ".png";
+			img.src = "resources/Image/enemy" + (i + 1) + ".png";
 			context.drawImage(img, center.x, center.y, 40, 40);
 		}
 	}
