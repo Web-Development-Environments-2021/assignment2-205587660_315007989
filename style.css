@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 .navbar-nav {
+  text-align: left;
+  /* top: 65px; */
   top: -5px;
   margin: 0;
   list-style-type: none;
@@ -20,13 +22,31 @@
   justify-content: space-around;
 }
 
+#Header {
+  /* margin-right: 100%; */
+  left:0;
+  width: 13vw;
+  color: #45a29e;
+  font-size: medium;
+  /* margin-right: 100%; */
+  font-family: "Poppins", sans-serif;
+}
+/* #header{
+  z-index: 20;
+  height: 5vw;
+  font-size: smaller;
+  width: 13vw;
+  align-self: f;
+    box-shadow: 0 100vh 100vw 0 rgba(0, 0, 0, 0.2);
+
+} */
+
 h2.title {
   color: #66fcf1;
 }
 .nav-item {
   color: #45a29e;
-    cursor: pointer;
-
+  cursor: pointer;
   display: inline-block;
   margin-right: 100%;
 }
@@ -47,7 +67,7 @@ h2.title {
   margin-top: -6px;
 }
 
-.navbar-nav-text {
+.navbar-nav-text, #navbar-nav-text {
   color: #45a29e;
   font-family: "Poppins", sans-serif;
 }
@@ -148,7 +168,6 @@ input {
 .login,
 .setting,
 .Game {
-
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
@@ -274,11 +293,9 @@ form {
   text-align: center;
   left: 120px;
   bottom: 65px;
-
 }
-output{
-    color: #c5c6c7;
-
+output {
+  color: #c5c6c7;
 }
 .RandomButton:hover {
   background-color: #66fcf1;
@@ -317,7 +334,7 @@ output{
   flex-direction: column-reverse;
   min-height: 80vh;
   width: 90vw;
-  top:90px;
+  top: 90px;
   /* margin-bottom: 50px; */
 }
 .keysetting {
@@ -335,81 +352,77 @@ output{
   align-items: center;
 }
 
-
-.c{
+.c {
   text-align: left;
 }
 
-p{
-    color: #c5c6c7;
-
+p {
+  color: #c5c6c7;
 }
 
-
 body {
-background: rgb(31,40,51);
-background: linear-gradient(114deg, rgba(31,40,51,1) 15%, rgba(11,12,16,1) 100%);
-/* background: rgb(11,12,16);
+  background: rgb(31, 40, 51);
+  background: linear-gradient(
+    114deg,
+    rgba(31, 40, 51, 1) 15%,
+    rgba(11, 12, 16, 1) 100%
+  );
+  /* background: rgb(11,12,16);
 background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%); */
 
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-#score, #GameSetting{
+#score,
+#GameSetting {
   display: inline-block;
-  color:#66fcf1;
+  color: #66fcf1;
 }
-#GameSetting input{
+#GameSetting input {
   width: 90px;
   margin-right: 20px;
   margin-left: 5px;
   margin-top: 10px;
-
 }
 
-#score input{
+#score input {
   width: 45px;
   margin-right: 20px;
   margin-left: 5px;
-
 }
 
-.gameContiner{
-    display: grid;
-    width: 80vh;
-    height: 80vh;
-    grid-template-columns: 200fr 1fr;
-    grid-gap: 20px;
+.gameContiner {
+  display: grid;
+  width: 80vh;
+  height: 80vh;
+  grid-template-columns: 200fr 1fr;
+  grid-gap: 20px;
 }
 
-#GameSetting{
-width: 250px;
-position:relative 
+#GameSetting {
+  width: 250px;
+  position: relative;
 }
 
-#CanvasDiv{
+#CanvasDiv {
   margin-bottom: 0;
-  position:relative 
-
+  position: relative;
 }
-#canvas{
-
+#canvas {
   margin-right: 20px;
-  border:3px solid #66fcf1;
+  border: 3px solid #66fcf1;
   background-color: #0b143a;
 }
 
-
-
-#GameButtonNew{
+#GameButtonNew {
   /* width: 97.5%; */
   width: 200px;
   /* margin: 0,0,0,0;
   /* margin-top: 10px; */
-  border-color: #45a29e;  
+  border-color: #45a29e;
   color: white;
-   background-color: #45a29e;
+  background-color: #45a29e;
   /* border-style: solid; */
   border-color: #45a29e;
   color: white;
@@ -419,30 +432,29 @@ position:relative
   border: solid;
   cursor: pointer;
   bottom: -10px;
-  float:left;
+  float: left;
 }
 
-
-#GameButtonNew:hover{
+#GameButtonNew:hover {
   background-color: #66fcf1;
 }
 
-#gamePage{
-  top:-6%;
+#gamePage {
+  top: -6%;
 }
 
-#close{
+#close {
   display: inline;
   position: relative;
   left: 520px;
   top: -235px;
 }
 
-#about_window{
+#about_window {
   z-index: 10;
-  border:1px, black ;
+  border: 1px, black;
 }
 
-.t{
+.t {
   color: #0b143a;
 }
