@@ -2,18 +2,18 @@ var context;
 var shape = new Object();
 var board;
 var score;
-var n_food = 80;
-var remining_food = 80;
+var n_food;
+var remining_food;
 var pac_color;
 var start_time;
 var finshing_time;
 var interval;
 var lives;
 var slowTime = new Date();
-var positionRight = true;
+var position = "left";
 
 enemys = new Array();
-var Movechance =0.3
+var Movechance = 0.3
 var movingBouns = new Object();
 var special1 = new Object();
 special1.alive = true;
@@ -260,7 +260,7 @@ function Draw() {
 
 			if (board[i][j] == 2) {
 				//pacman
-				if (positionRight) {
+				if (position === "right") {
 					context.beginPath();
 					context.arc(center.x, center.y, 30, 0.15 * Math.PI, 1.85 * Math.PI); // half circle
 					context.lineTo(center.x, center.y);
@@ -270,7 +270,7 @@ function Draw() {
 					context.arc(center.x + 5, center.y - 15, 5, 0, 2 * Math.PI); // circle
 					context.fillStyle = "black"; //color
 					context.fill();
-				} else {
+				} else if (position === "left") {
 					context.beginPath();
 					context.arc(center.x, center.y, 30, 1.15 * Math.PI, 0.85 * Math.PI); // half circle
 					context.lineTo(center.x, center.y);
@@ -281,6 +281,33 @@ function Draw() {
 					context.fillStyle = "black"; //color
 					context.fill();
 				}
+				else if (position === "down") {
+					context.beginPath();
+					context.arc(center.x, center.y, 30, 0.65 * Math.PI, 0.35 * Math.PI);
+					context.lineTo(center.x, center.y);
+					context.fillStyle = pac_color; //color
+					context.fill();
+					context.beginPath();
+					context.arc(center.x + 15, center.y + 5, 5, 0, 2 * Math.PI); // circle
+					context.fillStyle = "black"; //color
+					context.fill();
+				}
+				else {
+					context.beginPath();
+
+					context.arc(center.x, center.y, 30, 1.65 * Math.PI, 1.35 * Math.PI); // up
+					context.lineTo(center.x, center.y);
+					context.fillStyle = pac_color; //color
+					context.fill();
+
+					context.beginPath();
+					context.arc(center.x + 15, center.y-5, 5, 0, 2 * Math.PI); // circle
+					context.fillStyle = "black"; //color
+					context.fill();
+				}
+
+
+
 			} else if (board[i][j] == 1) {
 				//food
 				context.beginPath();
@@ -359,11 +386,15 @@ function UpdatePosition() {
 	var left = false;
 	if (x == 1) {
 		//up
+		position = "up";
+
 		if (shape.j > 0 && board[shape.i][shape.j - 1] != 4) {
 			shape.j--;
 		}
 	}
 	if (x == 2) {
+		position = "down";
+
 		//down
 		if (shape.j < 9 && board[shape.i][shape.j + 1] != 4) {
 			shape.j++;
@@ -371,14 +402,14 @@ function UpdatePosition() {
 	}
 	if (x == 3) {
 		//left
-		positionRight = false;
+		position = "left";
 		if (shape.i > 0 && board[shape.i - 1][shape.j] != 4) {
 			shape.i--;
 		}
 	}
 	if (x == 4) {
 		//right
-		positionRight = true;
+		position = "right";
 
 		if (shape.i < 9 && board[shape.i + 1][shape.j] != 4) {
 			shape.i++;
@@ -661,7 +692,7 @@ function Check_Key_Press(inputField, event) {
 
 
 function config() {
-	remining_food = document.getElementById("numBallsInput").value;
+	n_food = document.getElementById("numBallsOutput").value;
 	timer = document.getElementById("timer").value;
 	timer = parseInt(document.getElementById("timer").value);
 	n_enemies = document.getElementById("numMonsterInput").value;
@@ -672,7 +703,7 @@ function config() {
 		window.alert("Cant Start Game With Duplicate Keys.");
 		return;
 	}
-	if (isNaN(timer) ||timer<=0) {
+	if (isNaN(timer) || timer <= 0) {
 		window.alert("Invalid Time");
 		return;
 	}
@@ -763,18 +794,18 @@ function switchDialogAboout() {
 }
 
 
-function getConfigForGame(){
+function getConfigForGame() {
 
 	document.getElementById("leftkey_game").value = document.getElementById("leftkey").value
 	document.getElementById("rightkey_game").value = document.getElementById("rightkey").value
 	document.getElementById("upkey_game").value = document.getElementById("upkey").value
 	document.getElementById("downkey_game").value = document.getElementById("downkey").value
 
-	document.getElementById("5_color_game").value=	document.getElementById("5_color").value;
-	document.getElementById("15_color_game").value=	document.getElementById("15_color").value;
-	document.getElementById("25_color_game").value=	document.getElementById("25_color").value;
+	document.getElementById("5_color_game").value = document.getElementById("5_color").value;
+	document.getElementById("15_color_game").value = document.getElementById("15_color").value;
+	document.getElementById("25_color_game").value = document.getElementById("25_color").value;
 
-	document.getElementById("numBalls_game").value=document.getElementById("numBallsInput").value;
-	document.getElementById("timer_game").value= parseInt(document.getElementById("timer").value);
-	document.getElementById("numMonster_game").value=document.getElementById("numMonsterInput").value;
+	document.getElementById("numBalls_game").value = document.getElementById("numBallsInput").value;
+	document.getElementById("timer_game").value = parseInt(document.getElementById("timer").value);
+	document.getElementById("numMonster_game").value = document.getElementById("numMonsterInput").value;
 }
