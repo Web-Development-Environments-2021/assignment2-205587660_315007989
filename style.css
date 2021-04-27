@@ -376,7 +376,8 @@ background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%);
 }
 
 #score,
-#GameSetting {
+#GameSetting,
+#UserNameGame {
   display: inline-block;
   color: #66fcf1;
 }

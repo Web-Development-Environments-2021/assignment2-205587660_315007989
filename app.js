@@ -11,7 +11,7 @@ var interval;
 var lives;
 var slowTime = new Date();
 var position = "left";
-
+var ActiveUserName;
 enemys = new Array();
 var Movechance = 0.3
 var movingBouns = new Object();
@@ -237,6 +237,7 @@ function GetKeyPressed() {
 function Draw() {
 	canvas.width = canvas.width; //clean board
 	lblScore.value = score;
+	UserNameGame.textContent =""+ActiveUserName+ ", Welcome      ";
 	time = new Date();
 	lblTime.value = ((finshing_time - time) / 1000).toFixed(1);
 	if (lblTime.value <= 0) {
@@ -654,6 +655,7 @@ function signIn() {
 	var user = $("#login_username").val();
 	var pass = $("#login_password").val();
 	if (database.find((e) => e.username == user && e.password == pass)) {
+		ActiveUserName = user;
 		opendiv("#settingPage");
 	} else {
 		alert("Sorry, wrong username and password!");
