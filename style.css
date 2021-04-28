@@ -408,6 +408,7 @@ background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%);
 }
 
 #CanvasDiv {
+  right: 100px;
   margin-bottom: 0;
   position: relative;
 }
@@ -462,5 +463,5 @@ background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%);
 }
 
 .setting p{
-  margin: 12px;
+  margin: 5px;
 }

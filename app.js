@@ -516,7 +516,7 @@ function hit() {
 	if (lives == 1) {
 		lives--;
 		Draw()
-		alert("Game Over")
+		alert("Loser!!!")
 		window.clearInterval(interval);
 		StopMusic()
 	}
