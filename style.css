@@ -370,7 +370,7 @@ body {
   /* background: rgb(11,12,16);
 background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%); */
 
-  overflow-y: hidden; /* Hide vertical scrollbar */
+  /* overflow-y: hidden; Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
