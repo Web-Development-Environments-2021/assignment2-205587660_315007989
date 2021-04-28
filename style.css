@@ -178,7 +178,9 @@ input {
   grid-template-columns: 2fr;
   z-index: 5;
 }
-
+.setting{
+  margin: 0,0,0,0;
+}
 form {
   display: flex;
   align-items: center;
@@ -322,14 +324,11 @@ output {
   text-align: center;
   right: 80px;
 }
-.settings {
-  margin-bottom: 0%;
-  /* padding-top: 0%; */
-}
+
 .flexbox-container-settings {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -5;
   left: 10vw;
   display: flex;
   flex-direction: column-reverse;
@@ -339,7 +338,7 @@ output {
   /* margin-bottom: 50px; */
 }
 .keysetting {
-  margin: 0%;
+  margin-top: -2%;
 }
 
 .footer {
@@ -403,7 +402,8 @@ background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%);
 }
 
 #GameSetting {
-  width: 250px;
+    height: 80vh;
+  width: 80vh;
   position: relative;
 }
 
@@ -459,4 +459,8 @@ background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%);
 
 .t {
   color: #0b143a;
+}
+
+.setting p{
+  margin: 12px;
 }
