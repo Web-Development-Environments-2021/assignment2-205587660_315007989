@@ -449,8 +449,9 @@ background: linear-gradient(180deg, rgba(11,12,16,1) 39%, rgba(31,40,51,1) 93%);
 #close {
   display: inline;
   position: relative;
-  left: 520px;
-  top: -235px;
+  right: -600px;
+  top: -330px;
+
 }
 
 #about_window {
